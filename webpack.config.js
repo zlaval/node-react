@@ -27,6 +27,11 @@ module.exports = {
             template: 'client/src/index.html',
             chunks: ['app']
         })
-    ]
+    ],
+    devServer: {
+        historyApiFallback: true,
+        contentBase: path.join(__dirname, "client", "dist"),
+        port: 9000
+    }
 
 }
