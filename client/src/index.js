@@ -5,14 +5,14 @@ import { createStore } from "redux"
 import { BrowserRouter, Route, Switch } from "react-router-dom"
 
 import reducers from "./reducers"
-import Home from "./components/home"
+import ExchangeSearchBar from "./containers/exchange_search"
 
 ReactDOM.render(
     <Provider store={createStore(reducers)}>
         <BrowserRouter>
             <div>
                 <Switch>
-                    <Route path="/" component={Home} />
+                    <Route path="/" component={ExchangeSearchBar} />
                 </Switch>
             </div>
         </BrowserRouter>
