@@ -1,11 +1,18 @@
+import axios from "axios"
+
+const URL = "https://api.fixer.io/latest?base=HUF"
+
 export const EXCHANGE = "EXCHANGE"
 
 export function changeMoney(amount) {
-    //TODO change from huf to usd
-    //use axios + map with async middleware
-    const money = 100
-    return {
-        type: EXCHANGE,
-        payload: money
+    const request = axios.get(URL)
+    return (dispatch) => {
+        request.then(({ data }) => {
+            const money = amount * data.rates["USD"]
+            dispatch({
+                type: EXCHANGE,
+                payload: money
+            })
+        })
     }
 }

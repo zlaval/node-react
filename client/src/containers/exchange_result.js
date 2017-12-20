@@ -4,7 +4,9 @@ import { connect } from "react-redux";
 class ExchangeResult extends Component {
     render() {
         return (
-            <input className="form-control" value={this.props.exchange} />
+            <h2>
+                {this.props.exchange}
+            </h2>
         )
     }
 }
