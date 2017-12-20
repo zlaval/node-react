@@ -11,7 +11,9 @@ ReactDOM.render(
     <Provider store={createStore(reducers)}>
         <BrowserRouter>
             <div>
-                <Route path="/" component={Home} />
+                <Switch>
+                    <Route path="/" component={Home} />
+                </Switch>
             </div>
         </BrowserRouter>
     </Provider>,
