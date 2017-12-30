@@ -15,3 +15,15 @@ describe('GET /v1/home', () => {
     })
 })
 
+describe('GET /v1/users', () => {
+    it('should return users from db', (done) => {
+        request(app)
+            .get('/v1/users')
+            .expect(200)
+            .expect((res) => {
+                expect(res.body.users.length).toBe(1)
+            })
+            .end(done);
+    })
+})
+

@@ -7,7 +7,7 @@
     "build": "webpack",
     "start-client": "webpack-dev-server --open",
     "start-server": "node server/src/server.js --open",
-    "test-server": "mocha server/test/*.test.js"
+    "test-server": "mocha server/test/*.test.js --exit"
   },
   "author": "",
   "license": "ISC",
