@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack",
     "start-client": "webpack-dev-server --open",
-    "start-server": "node server/src/server.js --open"
+    "start-server": "node server/src/server.js --open",
+    "test-server": "mocha server/test/*.test.js"
   },
   "author": "",
   "license": "ISC",
@@ -15,7 +16,10 @@
     "babel-loader": "^7.1.2",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "expect": "^22.0.3",
     "html-webpack-plugin": "^2.30.1",
+    "mocha": "^4.1.0",
+    "supertest": "^3.0.0",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.9.7"
   },
