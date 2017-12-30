@@ -8,6 +8,9 @@ describe('GET /v1/home', () => {
         request(app)
             .get('/v1/home')
             .expect(200)
+            .expect((res) => {
+                expect(res.text).toBe('hello world')
+            })
             .end(done)
     })
 })
