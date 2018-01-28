@@ -1,0 +1,7 @@
+{
+    "development": {
+        "PORT": 3000,
+        "MONGODB_URI": "mongodb://192.168.99.100:27017/NodeReact",
+        "JWT_SECRET": "lkhasbvx98w7wjasldhaj*45daf234w*/asdf"
+    }
+}
