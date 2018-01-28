@@ -8,6 +8,7 @@ import thunk from "redux-thunk"
 
 import reducers from "./reducers"
 import ExchangeView from "./components/exchange_view"
+import CarTable from "./containers/car_table"
 
 const store = createStore(
     reducers,
@@ -20,6 +21,7 @@ ReactDOM.render(
             <BrowserRouter>
                 <div>
                     <Switch>
+                        <Route path="/cars" component={CarTable} />
                         <Route path="/" component={ExchangeView} />
                     </Switch>
                 </div>
