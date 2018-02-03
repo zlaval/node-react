@@ -27,12 +27,14 @@ class CarTable extends Component {
 
         return (
             <Table>
-                <TableHeader key={0}>
-                    <TableHeaderColumn>Brand</TableHeaderColumn>
-                    <TableHeaderColumn>Age</TableHeaderColumn>
+                <TableHeader>
+                    <TableRow>
+                        <TableHeaderColumn>Brand</TableHeaderColumn>
+                        <TableHeaderColumn>Age</TableHeaderColumn>
+                    </TableRow>
                 </TableHeader>
                 <TableBody>
-                    {this.props.cars.forEach(this.renderTableRows)}
+                    {this.props.cars.map(this.renderTableRows)}
                 </TableBody>
             </Table>
         )
